@@ -1,0 +1,8 @@
+Theme 1: Eval design is a creative discipline, not just a QA checkbox.
+Invest in hiring or training people who can think critically about defining "good" — treat eval design as a first-class product skill, not an afterthought handed to the most junior engineer.
+
+Theme 2: "Good enough" vibes are a rational short-term strategy but a dangerous long-term default.
+Establish a clear internal threshold for when a product graduates from vibes-based iteration to formal evaluation, so the transition happens deliberately rather than after a public failure.
+
+Theme 3: Formal evals become non-negotiable at scale, high stakes, or competitive differentiation.
+Prioritize building rigorous evaluation infrastructure earliest for the features where a failure would be catastrophic or where measurable quality is the core reason customers choose you over a competitor.

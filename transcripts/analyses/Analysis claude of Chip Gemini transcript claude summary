@@ -1,0 +1,14 @@
+Theme 1: Pragmatic ROI-driven approach to evals
+Chip argues that not every feature needs rigorous evals — if users are happy and growth is strong, resources may be better spent on new features than marginal improvements.
+
+Recommendation: Before investing in an eval framework, explicitly weigh the engineering cost against the expected business impact, and reserve rigorous evaluation for high-stakes, high-scale, or competitively differentiating features.
+
+Theme 2: Stage-level decomposition over single end-to-end metrics
+Rather than asking "how many evals do I need," she reframes the question around confidence and failure identification, advocating for evaluating each stage of a pipeline independently.
+
+Recommendation: Break your AI product into its constituent stages — retrieval, reasoning, synthesis, etc. — and define targeted metrics for each so you can pinpoint where failures occur rather than just that they occur.
+
+Theme 3: Evals as a cross-functional discipline
+Good evals require both engineering knowledge (system architecture) and product knowledge (user behavior), making them a natural forcing function for closer collaboration across teams.
+
+Recommendation: Staff your eval efforts with mixed engineering-product pairs so that the metrics you build reflect not just technical correctness but actual user needs, and use eval findings to surface product and design opportunities — not just model bugs.

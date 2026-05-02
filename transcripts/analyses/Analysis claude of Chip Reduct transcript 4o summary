@@ -1,0 +1,5 @@
+Theme 1: Structured evals vs. intuition-based assessment. Organizations should move beyond "vibes-based" evaluation and implement structured, repeatable eval frameworks early, before scale exposes the blind spots that intuition alone cannot catch.
+
+Theme 2: Resource trade-offs between building evals and shipping features. Teams should treat eval development as an integral part of the product roadmap rather than a competing priority, embedding lightweight eval checkpoints into the feature release cycle so neither velocity nor quality is sacrificed.
+
+Theme 3: High-stakes and competitive contexts demand rigorous evaluation. Any company operating in a domain where failures carry significant consequences—or where model quality is a key differentiator—should prioritize investment in precise, task-specific evals as a non-negotiable part of its AI strategy.

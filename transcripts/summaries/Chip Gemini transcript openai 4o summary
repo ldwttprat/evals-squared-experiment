@@ -1,0 +1,28 @@
+GPT-4o
+
+
+Here are the key arguments from the conversation about AI evaluation (evals):
+
+Understanding Evals:
+
+Evals are tools or processes used to measure the performance of AI models or applications.
+There are two primary types of evals:
+App-specific evals: Focused on evaluating the performance of specific AI applications, like chatbots.
+Task-specific evals: Designed to measure a model's ability in a specific area, such as creative writing, by creating datasets and criteria for evaluation.
+The Creativity of Evals:
+
+Designing evals is a creative process that involves developing criteria, guidelines, and training people to evaluate effectively.
+Contrary to being dry, creating evals can be a fun and engaging activity.
+The Debate Around the Need for Evals:
+
+Some companies prioritize "vibe-checking" (intuitive assessment) over formal evaluation metrics.
+Companies with limited resources may opt to focus on building features rather than investing in evals, as the potential improvement through evals might be incremental (e.g., improving performance from 80% to 85%).
+Formal evals may not always be necessary for applications that are "good enough" and showing positive user engagement and growth.
+Importance of Evals in High-Stakes Scenarios:
+
+Evals are critical for scaling AI systems and preventing failures, especially in contexts where errors could lead to catastrophic consequences.
+Companies operating in competitive spaces or aiming to maintain a strong edge need robust evals to understand performance, failure modes, and competitive positioning.
+Trade-offs in Investment:
+
+Companies weigh the cost of building evals against the potential benefits, balancing between improving existing features versus developing new ones.
+While "good enough" may suffice for some, companies aiming for excellence or operating at scale must take evals seriously.

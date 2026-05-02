@@ -1,0 +1,8 @@
+Theme 1: Evaluation rigor should match stakes and business importance.
+Recommendation: Reserve your most rigorous, multi-metric evaluation efforts for systems that are high-scale, high-risk, or central to your competitive advantage, and let lower-stakes features rely on lighter-weight signals like user feedback and usage trends.
+
+Theme 2: AI quality is inherently ambiguous, so evals must be multi-dimensional and creative.
+Recommendation: Invest in decomposing "good" into concrete, stage-by-stage criteria — covering retrieval, reasoning, and synthesis separately — rather than relying on a single end-to-end score that obscures where failures originate.
+
+Theme 3: Evals exist to drive decisions, not just produce scores.
+Recommendation: Treat every evaluation you build as a diagnostic tool that should directly inform what your team fixes next, and retire or deprioritize any eval that no longer changes a decision.

@@ -1,0 +1,9 @@
+Theme 1: Eval design is a creative discipline, not just a technical checkbox.
+Recommendation: Invest in people who deeply understand your domain and what "good" looks like, rather than treating evaluation as a purely engineering task to be automated away.
+
+Theme 2: The decision to rely on "vibes" versus rigorous evals is fundamentally a business ROI calculation.
+Recommendation: Before defaulting to either approach, explicitly quantify the cost of building a proper eval pipeline against the actual revenue or retention impact of the quality improvements it would deliver.
+
+Theme 3: Rigorous evaluation becomes non-negotiable when failures carry outsized consequences.
+Recommendation: If your product operates at scale, touches high-stakes decisions, or competes primarily on output quality, treat a robust eval framework as critical infrastructure rather than a nice-to-have.
+

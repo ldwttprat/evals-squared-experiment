@@ -1,0 +1,16 @@
+Claude-Opus-4.6
+
+
+Thinking...
+
+The user wants a summary of the key arguments in this conversation about AI evaluation (evals).
+
+In this conversation, Chip Huyen outlines several key arguments about AI evaluation:
+
+Two distinct types of evals exist. The first is evaluating a specific AI application (like a chatbot) to determine whether it's performing well. The second is task-specific eval design for model developers, which involves deeply understanding a domain — like creative writing — and designing datasets and criteria to measure quality in that domain. Huyen emphasizes that this second type is surprisingly creative and fun work.
+
+The "vibes vs. evals" debate has a rational business logic behind it. Some successful companies skip formal evals and rely on intuition — checking whether things feel like they're working. Huyen explains why this happens through the lens of an executive weighing trade-offs: if an app is already working well enough (customers are happy, traffic is growing), investing two engineers in evals for a marginal improvement from 80% to 85% may be less attractive than deploying those engineers to build an entirely new feature and get it to "good enough" as well.
+
+But skipping evals carries real risk. Without clear metrics and visibility into how a model is performing, applications can fail in unexpected or damaging ways. Huyen argues that evals become critically important in three scenarios: when you operate at scale, when failures could have catastrophic consequences, and when product quality is a competitive differentiator — where you need to understand precisely where you stand relative to competitors.
+
+The overall takeaway is that evals aren't universally necessary at the same depth for every company, but the decision to skip them is a calculated bet that becomes increasingly dangerous as stakes and scale grow.

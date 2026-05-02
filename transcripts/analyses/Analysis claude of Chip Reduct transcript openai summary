@@ -1,0 +1,8 @@
+Theme 1: "Good enough" often beats perfection in practice.
+Recommendation: Establish a clear threshold for what "good enough" means for your use case so you can move fast without fooling yourself about quality.
+
+Theme 2: Formal evals become non-negotiable at scale or in high-stakes contexts.
+Recommendation: Invest in rigorous evaluation infrastructure before you scale to millions of users or enter domains where failures carry serious consequences, not after something goes wrong.
+
+Theme 3: Eval design is a creative discipline, not just a technical checkbox.
+Recommendation: Treat eval creation as a first-class product skill—defining what success looks like, building meaningful datasets, and training evaluators—rather than delegating it as an afterthought to QA.

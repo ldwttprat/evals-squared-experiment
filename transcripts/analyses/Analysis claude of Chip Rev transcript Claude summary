@@ -1,0 +1,14 @@
+Theme 1: Pragmatic ROI-driven approach to evals
+Chip argues that not every feature needs rigorous evals — if users are happy and growth is strong, resources may be better spent launching new features than chasing incremental improvements.
+
+Recommendation: Before investing in a comprehensive eval suite, assess whether the expected improvement justifies the engineering cost, and reserve rigorous evaluation for high-stakes, high-scale, or competitively sensitive features.
+
+Theme 2: Stage-level decomposition over single end-to-end metrics
+Rather than relying on one summary metric, she advocates evaluating each stage of a complex system independently (e.g., query quality, retrieval relevance, synthesis) to pinpoint exactly where failures occur.
+
+Recommendation: Break your AI pipeline into discrete stages and assign targeted metrics to each, so that when performance degrades you can diagnose and fix the specific component rather than guessing across the entire system.
+
+Theme 3: Evals as a cross-functional discipline
+Writing effective evals requires both engineering knowledge of system architecture and product knowledge of user behavior, making evaluation a natural bridge between previously siloed teams.
+
+Recommendation: Staff your eval efforts with cross-functional pairs — an engineer who understands the system's internals and a product person who understands user expectations — so that your metrics capture both technical correctness and real-world relevance.

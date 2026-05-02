@@ -1,0 +1,29 @@
+Chip Huyen on Evals - Transcript
+
+[00:00:00] Host: ...as they have so few customers and there's so many people getting into the space. So basically even though they're some of the fastest growing companies in the world you're feeling like there's a challenge up ahead.
+
+[00:00:13] Chip Huyen: I'm much less bearish on it. Um, I think I'm curious because I think things have had a way of work out in ways that I don't expect. So I think that maybe these companies they have a lot of data maybe they will be able to use that to like have some insight that helps them like stay ahead of the curve, you know. So so I don't know. 
+
+[00:00:38] Host: A very fair answer. Okay, well while we're on this topic I want to chat about evals which is a very recurring topic in this podcast. This is the other piece of data content these companies share that AI labs really need. Can you just talk about what an eval is, the simplest way to understand it, and then how this helps models get smarter?
+
+[00:00:58] Chip Huyen: So I think that people approach eval, I think there's like two very different problems. One is an app builder, right, and can I say I have an app that do like maybe a chatbot. Very simple, it's the first thing that came to my mind. Um, and I want to know if this chatbot is good or bad, right? So so I need to come up with a way of like evaluating this chatbot. 
+
+Another thing is I think of this as a task-specific eval design. So let's say I'm a model developer and I want to make my model better at creative writing, right? And I was like okay, but how, how do I even measure creative writing, right? So I can need someone to like, okay, understand creative writing and think about like what makes good story or like what makes a story good and then design the whole dataset and then criteria to evaluate creative writing. 
+
+So yeah, so I think that's like more like eval design that is very interesting. Coming up with criteria, coming up with guidelines, how to do it, and then also like train people, like how to do it effectively. So I guess, in a way I think eval is really, really fun because it's extremely creative. I was looking at like different evals people built and I was like wow, like this is not dry at all. It's just like super super super fun.
+
+[00:02:22] Host: We did a whole podcast on evals with Hamel and Shreya and that's exactly what they talked about is just it's actually really fun to create evals for companies especially. So let's still dig into that one a little bit more. 
+
+There's this kind of debate online that I don't know how big of a deal this debate is but it feels like people spend a lot of time thinking about this. This idea of do we need evals for AI products, some of the best companies say they don't really do evals, they just go on vibes. They're just like is this working well, can I feel it or not? What's your take on just the importance of building evals and the skill of evals for AI apps, not the model companies?
+
+[00:03:00] Chip Huyen: You don't have to be like absolutely perfect at things to win. You just need to be like good enough and be consistent about it. Okay this is not the philosophy I follow but like I have worked with enough companies to see that play out. So what I say like why companies don't need eval, right? 
+
+Let's say you are like an executive, right, and you want to have a new use case. So here's a use case you started out and build and it's like it works well, right? The customers are somewhat happy, you don't have the exact metric for it, but like the traffic keeps increasing, like people seem happy, people keep buying stuff, right? And now here's your engineer coming like okay, we need eval for it. 
+
+And the executive was like okay, how much effort do we need to put into eval? And they were like okay, maybe like two engineers, this much and this much, and it could maybe would improve, so I was like okay so how much expected gain can I get from it? And the engineer could be like oh maybe we can improve it from like 80% to like 82%, 85%, right? And I was like okay, but it's going to take that two engineers and build and launch a new feature, then it could give me like so much more like improvement, right? 
+
+So so I think it's like one of them as they eval sometimes people think of eval as like okay this is good enough, just don't touch it, like if you do spend a lot of energy on eval it would only incremental improvement whereas they spend the energy on like another use case and maybe let's get it to good enough that you can just vibe check it, right? 
+
+So so I do think like maybe that's the debate is about. I do think that like a lot of time people just like get things to the place when it's like okay good enough, people run. But and then but of course there's a lot of risk associated with it because if you don't have a clear metric, you don't have good visibility to how your application and the model is performing, it might do something very dumb or it can cause you like I don't know, something like crazy can happen. 
+
+So yeah so so I do think eval is very, very important if you have, if you operate at scale and where like failures can have like catastrophic consequences then you do need to be very tyrannical about like what you put in front of the users, understand different failure modes like what could go wrong and also maybe in the space when that like is a feature, as a product, as a competitive advantage, right? You want to be the best at it, so you want to have like a very strong understanding of like where you are and like where you are with your competitors.

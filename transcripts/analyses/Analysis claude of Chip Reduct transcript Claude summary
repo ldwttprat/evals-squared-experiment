@@ -1,0 +1,8 @@
+1. Eval design is a creative, domain-specific discipline, not a dry technical checkbox.
+Recommendation: Invest in people who deeply understand your domain and can define what "good" looks like before you build any measurement infrastructure.
+
+2. The "good enough" trap makes it rational—but risky—to skip formal evals when growth metrics look healthy.
+Recommendation: Establish a minimum eval baseline early so that when things eventually break at scale, you aren't diagnosing problems for the first time under pressure.
+
+3. The right level of eval investment is a context-dependent tradeoff driven by stakes, scale, and competitive differentiation.
+Recommendation: Treat eval resourcing as a strategic decision tied to how central the AI capability is to your product's value proposition, scaling it up precisely where failures would be catastrophic or where quality is what sets you apart.

@@ -1,0 +1,8 @@
+Theme 1: Treat evals as an investment, not an obligation.
+Recommendation: Before building an eval suite, assess whether the engineering effort will yield meaningful product improvements or whether those resources are better spent shipping new features.
+
+Theme 2: Reserve rigorous evaluation for high-stakes, high-scale scenarios.
+Recommendation: Prioritize formal evals where failures carry significant consequences or where AI performance is your core differentiator, and accept lighter-touch validation elsewhere.
+
+Theme 3: Evaluate complex AI workflows step-by-step, not just end-to-end.
+Recommendation: For multi-step processes like deep research or agentic pipelines, design evals that assess each intermediate stage so you can pinpoint exactly where quality breaks down.

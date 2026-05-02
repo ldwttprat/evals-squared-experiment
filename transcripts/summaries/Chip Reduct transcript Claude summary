@@ -1,0 +1,16 @@
+Claude-Opus-4.6
+
+
+Thinking...
+
+The user wants a summary of the key arguments in this conversation about AI evaluation (evals).
+
+The conversation covers several key arguments about AI evaluation:
+
+What evals are: The speakers distinguish between two types of eval problems. The first is task-specific eval for app builders — for example, determining whether a chatbot is performing well or poorly. The second is eval design for model developers, which involves deeply understanding a domain (like creative writing), defining what "good" looks like, creating datasets and criteria, and training people to evaluate effectively. The speakers emphasize that eval design is a surprisingly creative and fun process, not a dry technical exercise.
+
+The case against investing heavily in evals: From a business perspective, many companies find their AI products work "good enough" without formal evals. If traffic is growing, customers are happy, and the product is selling, an executive may rationally prefer to allocate two engineers to launching a new feature rather than spending them on evals that might only improve performance from 80% to 82–85%. This explains the "vibe-based" approach some successful companies take — they rely on intuitive judgment rather than rigorous measurement, and it works well enough in practice.
+
+The case for evals: Despite that pragmatic argument, the speakers stress that evals become critical in certain situations: when operating at scale, when failures can have catastrophic consequences, and when the AI feature itself is a competitive differentiator. In those contexts, you need rigorous metrics, a clear understanding of failure modes, and strong visibility into how your application and models are performing relative to competitors. Without that, something "very dumb" or damaging can happen.
+
+In short, the conversation frames the eval debate not as a binary yes-or-no question but as a resource allocation tradeoff — where the right level of investment in evals depends on the stakes, the scale, and whether the AI capability is core to the product's competitive advantage.

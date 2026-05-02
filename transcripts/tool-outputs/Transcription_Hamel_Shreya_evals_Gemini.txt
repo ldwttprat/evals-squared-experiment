@@ -1,0 +1,44 @@
+[00:00] Hamel: The channel through which the customer is communicating is through text message and you're just getting like really garbled and you can see here that kind of doesn't make sense.
+[00:08] Hamel: You know, like the words are being cut off like "in the meantime" and then the system doesn't know how to respond because you know how people text message.
+[00:15] Hamel: They like write short phrases, they you know split their sentence across four or five different turns.
+[00:20] Host: Yeah, so what do you do with something like that?
+[00:22] Hamel: Yeah, so this is a different kind of error. This is more of "hey we're not handling this interaction correctly". This is more of a technical problem rather than "hey the AI is not doing exactly what we want".
+[00:32] Host: It's still really cool. Like it's amazing you're catching that too here, otherwise you'd have no idea this was happening.
+[00:38] Hamel: Yeah, you might not know this is happening, right? And so you would just say okay, you'll write a note like "conversation flow is janky because of text message".
+[00:47] Host: And I like yeah, I like that you're using the word janky, it shows you just how informal this can be at this stage.
+[00:52] Hamel: Yeah, it's supposed to be chill. Like just don't overthink it. And there's some... there's a way to do this.
+[00:58] Hamel: So the question always comes up: how do you do this? Do you look at... do you try to find all the different problems in this trace?
+[01:05] Hamel: What... what do you write a note about? And the answer is: just write down the first thing that you see that's wrong.
+[01:11] Hamel: The most upstream error. Don't worry about all the errors, just capture the most... the first thing that you see that's wrong and stop and move on.
+[01:18] Hamel: And you can get really good at this. The first two or three can be very painful but you know it doesn't... you can you know do a bunch of them really fast.
+[01:26] Hamel: So here's another one. And let's skip the system prompt again.
+[01:31] Hamel: And the user asks "Hey, I'm looking for two to three bedroom with either one or two baths. Do you provide virtual tours?"
+[01:37] Hamel: And a bunch of tools are called. And it says "Hi Sarah, currently we have three bedroom two and a half bathroom apartment available for $2175."
+[01:46] Hamel: "Unfortunately we don't have any two bedroom options at the moment. We do offer virtual tour tours, you can schedule a tour blah blah blah."
+[01:54] Hamel: It just so happens that there's no virtual tour, right?
+[01:58] Host: Nice.
+[01:59] Hamel: Right? So you know it is hallucinating something that doesn't exist and you would kind of have to bring your context as an engineer or even your product context to say "hey this is kind of weird like you know we shouldn't be telling person about virtual tour when it's not offered".
+[02:12] Hamel: So you would say okay "offered virtual tour" and you just... you just write the note.
+[02:18] Hamel: So you can see there's a diversity of different kinds of errors that we're seeing. And we're actually learning a lot about your application in a very short amount of time.
+[02:26] Shreya: One common question that we get from people at this stage is "okay I understand what's going on, can I ask an LLM to do this process for me?"
+[02:33] Host: Mm, great question.
+[02:35] Shreya: And I loved Hamel's most recent example because what we usually find when we try to ask an LLM to do this error analysis is it just says the trace looks good.
+[02:44] Shreya: Because it doesn't have the context needed to understand whether something might be you know bad product smell or not.
+[02:51] Shreya: For example the hallucination about scheduling the tour. Right? I can guarantee you, I would bet money on this, if I put that into ChatGPT and asked "is there an error?" it would say "no, did a great job".
+[03:02] Shreya: But Hamel had the context of knowing we don't actually have this virtual tour functionality, right?
+[03:08] Shreya: So I think in these cases it's so important to make sure you are manually doing this yourself.
+[03:13] Shreya: And we'll talk... we can talk a little more about when to use LLMs in the process later.
+[03:17] Shreya: But like number one pitfall right here is people are like "let me automate this with an LLM".
+[03:22] Host: Do you think they'll... we'll get to a place where an agent can do this without... has that context?
+[03:27] Shreya: Oh no no no, sorry. There are parts of error analysis that an LLM is suited for which we can talk about later in this podcast.
+[03:35] Shreya: But right now in this stage of freeform note-taking is not the place for an LLM.
+[03:39] Host: Got it. And this is something you call open coding, this step?
+[03:42] Shreya: Yes, absolutely.
+[03:43] Host: Cool. Um, another term that you used in your post that I love and that fits into this step is this idea of a benevolent dictator.
+[03:51] Host: Maybe just talk about what that is and maybe Shreya cover that?
+[03:55] Shreya: Yeah, so Hamel actually came up with this term.
+[03:57] Host: Okay, maybe Hamel cover that.
+[03:59] Hamel: No problem. And we'll actually show the LLM automation in this example because we're going to take this example, we're going to go all the way through.
+[04:06] Host: Amazing.
+[04:07] Hamel: And so... benevolent dictator is just a catchy term for the fact that when you're doing this open coding, a lot of teams get bogged down in having a committee do this.
+[04:16] Hamel: And for a lot of situations that's wholly unnecessary.

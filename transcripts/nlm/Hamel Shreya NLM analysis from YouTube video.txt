@@ -1,0 +1,3 @@
+﻿1. The Necessity of Manual Error AnalysisAlways start your evaluation process by manually reviewing a sample of your AI application's interaction logs to uncover actual failure modes before attempting to write any automated tests 1-3.
+2. Categorizing and Prioritizing FailuresGroup your initial observations of errors into broader failure categories (axial codes) so you can count their frequency and prioritize which issues are most critical to fix 4-6.
+3. Deploying Targeted "LLM as a Judge" EvaluatorsCreate automated, binary "pass/fail" LLM judges targeted at single, specific failure modes, and rigorously verify that their outputs align with human judgment before relying on them 7-10.

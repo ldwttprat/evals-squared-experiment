@@ -1,0 +1,8 @@
+Theme 1: Eval design is creative, skilled work — not a mechanical afterthought.
+Recommendation: Invest in hiring or developing people who combine domain expertise with judgment and creativity, rather than treating eval construction as a rote engineering task.
+
+Theme 2: Companies routinely under-invest in evals because "good enough" performance feels sufficient in the short term.
+Recommendation: Build a lightweight eval framework early — even before it feels urgent — so you have a baseline to detect regressions and guide improvements as the product matures.
+
+Theme 3: Rigorous evals become non-negotiable as products scale or enter high-stakes domains.
+Recommendation: Define clear thresholds for when your product's risk profile or user base demands a shift from informal "vibe checks" to structured, metrics-driven evaluation, and commit the resources before a failure forces your hand.

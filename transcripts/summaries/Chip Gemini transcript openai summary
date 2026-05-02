@@ -1,0 +1,42 @@
+GPT-5.4
+
+
+Key arguments about AI evaluation
+There are two distinct kinds of evals
+
+Application-level evals: Used by product teams to judge whether a specific AI app, like a chatbot, is performing well or badly.
+Model/task-specific eval design: Used by model developers to define how to measure performance on a capability such as creative writing. This requires designing datasets, criteria, guidelines, and training human evaluators.
+Eval design is creative work
+
+Chip argues that building evals is not a dry or purely mechanical task.
+Good evals require judgment, creativity, and deep understanding of what “good” looks like for a given task.
+Many companies do not prioritize evals early
+
+In practice, companies often aim for something that is “good enough” rather than perfectly measured.
+If a product appears to work, users are happy, traffic grows, and revenue increases, leadership may see little reason to invest heavily in formal evals.
+The tradeoff is usually resources vs. incremental gains
+
+Building evals takes engineering time and effort.
+Executives may prefer using those resources to launch new features or new use cases instead of improving an existing system from, say, 80% to 82–85%.
+This is a core reason some teams rely on “vibe checks” instead of rigorous evaluation.
+“Vibes” can be enough in some contexts
+
+For some products, especially early-stage or lower-risk ones, informal judgment may be sufficient to decide whether the system is usable.
+Companies do not need to be perfect to succeed; they often just need to be consistent and sufficiently good.
+But lack of evals creates real risks
+
+Without clear metrics, teams lose visibility into how the application and model are actually performing.
+That can allow serious failure modes to go unnoticed.
+Systems may behave in unexpectedly bad or harmful ways.
+Evals become essential at scale or in high-stakes settings
+
+If failures could have catastrophic consequences, rigorous evals are necessary.
+Companies operating at scale need strong control over what reaches users and clear understanding of failure modes.
+Evals can also be a competitive advantage
+
+If performance on a feature is central to the product, strong evals help teams understand:
+where they stand,
+how to improve,
+and how they compare to competitors.
+Bottom line
+The conversation argues that evals are important but not always equally urgent. Many companies postpone formal evaluation because “good enough” performance can still win in the market, especially when resources are limited. However, as products scale, stakes rise, or differentiation matters more, rigorous evals become critical for reliability, safety, and competitive strength.

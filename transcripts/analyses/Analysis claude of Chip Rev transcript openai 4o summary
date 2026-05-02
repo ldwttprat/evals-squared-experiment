@@ -1,0 +1,9 @@
+Theme 1: Strategic Prioritization of Evals
+Focus your evaluation efforts on the most critical user workflows and highest-impact failure modes rather than trying to comprehensively evaluate every aspect of your AI system.
+
+Theme 2: Balancing Rigor with Pragmatism
+Accept that evals don't need to be perfect — design them to produce actionable insights that drive meaningful improvements, and supplement structured metrics with qualitative judgment where appropriate.
+
+Theme 3: Cross-Functional Collaboration
+Treat eval design as a shared responsibility across product, engineering, and research teams so that evaluations reflect both technical performance and real user expectations.
+

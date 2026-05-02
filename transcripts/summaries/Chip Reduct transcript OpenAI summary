@@ -1,0 +1,44 @@
+GPT-5.4
+
+
+Key arguments about AI evaluation
+There are two distinct kinds of evals
+
+Product/app evals: Used by application builders to judge whether a specific AI feature, like a chatbot, is working well.
+Model/task-specific evals: Used by model developers to measure capabilities on a particular task, such as story writing, by defining what “good” looks like and creating datasets and criteria around it.
+Designing evals is creative, not mechanical
+
+Good evals require deciding what success means, writing clear guidelines, creating datasets, and training evaluators.
+The speaker emphasizes that eval creation can be “fun” and highly creative rather than dry or purely technical.
+Many companies may not prioritize formal evals
+
+In practice, some companies rely on a “vibe check”:
+Are users happy?
+Is usage growing?
+Are customers buying?
+If a feature seems “good enough,” leaders may see formal evals as a lower priority.
+The tradeoff is often about resource allocation
+
+Building evals takes time and engineering effort.
+If formal evaluation only improves performance incrementally, leaders may prefer to spend those resources launching new features or use cases that could drive bigger business gains.
+“Good enough” can be enough to win
+
+The conversation suggests companies do not need perfection to succeed.
+Consistent, usable performance may be more valuable than squeezing out small improvements through extensive evaluation.
+But lack of evals creates real risk
+
+Without clear metrics, teams may not understand failure modes.
+Systems can behave unpredictably or make serious mistakes.
+This becomes especially dangerous when failures could have major consequences.
+Evals become essential at scale or in high-stakes settings
+
+If a product serves many users or operates in sensitive contexts, companies need rigorous evaluation.
+In those cases, teams must carefully measure performance, understand what can go wrong, and control what reaches users.
+Evals matter when performance is the competitive advantage
+
+If the core product value depends on being better than competitors, then companies need strong evals to know:
+how well they are performing,
+where they are weak,
+and how they compare to others.
+Bottom line
+The conversation argues that AI evals are important, but not always equally urgent. For many companies, informal signals and “good enough” performance may justify moving fast without rigorous evals. However, formal evaluation becomes crucial when stakes are high, scale is large, or model quality itself is the main competitive edge.

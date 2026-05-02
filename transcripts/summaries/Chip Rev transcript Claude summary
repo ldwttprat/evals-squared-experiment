@@ -1,0 +1,19 @@
+
+Claude-Opus-4.6
+
+
+Thinking...
+
+The user wants a summary of the key arguments about AI evaluation (evals) from the Chip Huyen and Lenny Rachitsky conversation.
+
+Chip Huyen makes several nuanced arguments about AI evaluation in this conversation.
+
+Her central point is that evals serve a purpose — they guide product development — and their importance should be weighed against the return on investment. She pushes back against both the "evals are essential for everything" camp and the "just vibe check it" camp, landing on a pragmatic middle ground.
+
+She argues that companies don't necessarily need evals for every feature. If something is working, users are happy, and traffic is growing, an executive might reasonably choose to allocate two engineers toward launching a new feature rather than squeezing an incremental improvement from 80% to 85% on an existing one. She acknowledges this is not her personal philosophy but says she's seen it play out successfully in practice.
+
+However, she identifies specific situations where rigorous evals become critical: when operating at scale, when failures could have catastrophic consequences, and when the product itself is a competitive differentiator where you need to know exactly where you stand relative to competitors.
+
+On the structure of evals, she resists the idea of a fixed number. Rather than asking "how many evals do I need," she reframes it as "how many evals do I need for high confidence in my application's performance and to identify where it's failing so I can fix it." She uses deep research as an example — a single end-to-end metric is insufficient. You need to evaluate each stage: the diversity and quality of search queries, the relevance of retrieved results, the breadth versus depth of coverage, and the final synthesis. Some products might need hundreds of metrics.
+
+She also highlights that evals are a cross-functional problem, not just an engineering task. Writing good evals requires understanding system architecture (engineering) and user behavior (product), which is why she sees evals as a force that's bringing previously siloed teams closer together. And finally, she emphasizes that evals can surface unexpected opportunities — cases where performance is poor on a specific user segment, revealing not a model problem but a messaging or design problem.

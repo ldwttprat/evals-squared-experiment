@@ -1,6 +1,6 @@
 # Sources and Influences
 
-Practitioner work, academic research, and institutional efforts that inform the *evals²* experiment and the five-step blueprint in *Finding Your Blue Dot*.
+Practitioner work, academic research, and institutional efforts that inform the *evals²* experiment and the five-step blueprint in *Winning the Game of Broken Telephone*.
 
 ---
 

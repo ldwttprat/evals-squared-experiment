@@ -2,8 +2,8 @@
 
 A worked example of AI-infused pipeline evaluation. This appendix documents the methodology and findings of the experiment presented in:
 
-- *Finding Your Blue Dot: Evaluating AI Across the Research Pipeline.* DeWitt Prat, Lindsey. *ResearchOps Review*, 2026.
-- *Evaluating AI Across the Research Pipeline.* DeWitt Prat, Lindsey, with Kaleb Loosbrock, hosted by Ben Wiedmaier. User Interviews webinar, 31 March 2026. <https://www.userinterviews.com/events/evaluating-ai-across-the-research-pipeline>
+- *Winning the Game of Broken Telephone: A Blueprint for Evaluating AI Across the Research Pipeline.* DeWitt Prat, Lindsey. *ResearchOps Review*, May 2026. <https://www.theresearchopsreview.com/p/a-blueprint-for-evaluating-ai-across-the-research-pipeline>
+- *Evaluating AI Across the Research Pipeline.* DeWitt Prat, Lindsey, with Kaleb Loosbrock, hosted by Ben Wiedmaier. User Interviews webinar, 31 March 2026. <https://www.userinterviews.com/blog/what-is-the-ai-research-risk-cascade>
 
 The four CSV error logs referenced here are in this repository under `data/`.
 
@@ -149,7 +149,7 @@ A `SCHEMA.md` file describes the columns and value sets used in each CSV.
 
 ## Citation
 
-DeWitt Prat, Lindsey. 2026. "Finding Your Blue Dot: Evaluating AI Across the Research Pipeline." *ResearchOps Review*. Experiment data and methodology: <https://github.com/ldwttprat/evals-squared-experiment>.
+DeWitt Prat, Lindsey. 2026. "Winning the Game of Broken Telephone: A Blueprint for Evaluating AI Across the Research Pipeline." *ResearchOps Review*. Experiment data and methodology: <https://github.com/ldwttprat/evals-squared-experiment>.
 
 ## License
 

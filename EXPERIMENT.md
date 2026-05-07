@@ -69,29 +69,39 @@ All analysis runs were fresh API calls with no memory between them.
 
 ## 4. Divergence Tracking Methodology
 
-Four CSV divergence logs, each with typed and severity-rated entries. Headline counts:
+Six CSV divergence logs, each with typed and severity-rated entries. Headline counts:
 
-- **193 divergences** logged for the Chip Huyen 5-minute clip path (48 + 85 + 60: transcription + synthesis + analysis)
-- **290 divergences** across the full experiment, adding the 97-entry NotebookLM log from full-episode comparisons across all three episodes
+- **193 divergences** logged for the Chip Huyen 5-minute clip pipeline (48 transcription + 85 synthesis + 60 analysis)
+- **45 transcription divergences** from the other two 5-min clips (25 Hamel/Shreya + 20 Aishwarya/Kiriti) — transcription only; synthesis and analysis were not run on these clips
+- **97 NotebookLM divergences** from full-episode comparisons across all three episodes
+- **335 total** documented divergences across the experiment
 
-### `transcription_divergences.csv` (48 entries — Chip clip)
+### `transcription_divergences_chip.csv` (48 entries)
 
-Divergences between three transcription sources on the same source audio.
+Divergences between three transcription sources on the Chip Huyen 5-min clip.
 
 - **Columns:** `divergence_id`, `timestamp_approx`, `manual_audit_ground_truth`, `gemini_transcript`, `reduct_transcript`, `rev_transcript`, `divergence_type`, `severity`, `notes`
 - **Divergence types:** `word_substitution`, `word_omission`, `word_addition`, `speaker_misattribution`, `hedging_lost`, `hedging_changed`, `proper_noun_error`, `number_error`, `technical_term_error`, `disfluency_handling`
 - **Severity scale:** critical (changes meaning), moderate (changes emphasis or tone), minor (cosmetic)
 
-### `synthesis_cascade.csv` (85 entries — Chip clip)
+### `transcription_divergences_hamel_shreya.csv` (25 entries)
 
-How transcription divergences propagated or were transformed at the synthesis stage.
+Same schema as the Chip transcription file. Divergences between three transcription sources on the Hamel Husain & Shreya Shankar 5-min clip. Highlights: Reduct's name garbling ("Hamill" for Hamel), persistent generic speaker labels across the entire clip, and a critical "bats"/"baths" substitution.
+
+### `transcription_divergences_aishwarya_kiriti.csv` (20 entries)
+
+Same schema. Divergences between three transcription sources on the Aishwarya Reganti & Kiriti Badam 5-min clip. Highlights: the `/v/-/w/` confusion ("vibes"/"wipes") that propagates through both Reduct and Rev's human transcript, Gemini's persistent misattribution of Lenny's host turns to Kiriti, and "practically"/"tactically" and "ways"/"base" content substitutions tied to Indian-accented English.
+
+### `synthesis_cascade_chip.csv` (85 entries)
+
+How transcription divergences propagated or were transformed at the synthesis stage. Chip clip only.
 
 - **Columns:** `cascade_id`, `source_error_id`, `transcript_source`, `model`, `claim_in_summary`, `original_in_transcript`, `cascade_type`, `severity`, `notes`
 - **Cascade types:** `error_passed_through`, `error_amplified`, `error_corrected`, `error_avoided`, `hedging_to_assertion`, `argument_dropped`, `argument_invented`, `stance_shifted`
 
-### `analysis_cascade.csv` (60 entries — Chip clip)
+### `analysis_cascade_chip.csv` (60 entries)
 
-How synthesis-stage distortions propagated or were transformed at the analysis stage.
+How synthesis-stage distortions propagated or were transformed at the analysis (theme extraction) stage. Chip clip only.
 
 - **Columns:** `cascade_id`, `upstream_source`, `analysis_model`, `theme_extracted`, `recommendation`, `cascade_type`, `upstream_error_link`, `severity`, `exact_quote`, `notes`
 - **Cascade types:** `theme_from_transcription_error`, `theme_from_synthesis_error`, `theme_fabricated`, `recommendation_fabricated`, `hedging_to_doctrine`, `stance_amplified`, `stance_reversed`, `information_lost`, `confidence_without_basis`, `inter_analysis_contradiction`, `transcript_group_clustering`
@@ -154,7 +164,7 @@ This repository contains:
 - **12 summaries** (Chip clip only; 3 transcripts × 4 models)
 - **12 analyses** (Claude Opus 4.6)
 - **12 NotebookLM outputs** (3 episodes × 2 sources × 2 output types)
-- **4 divergence-log CSVs** (48 + 85 + 60 + 97 = 290 total documented divergences; the first three sum to 193 from the Chip 5-minute clip path)
+- **6 divergence-log CSVs** (48 + 25 + 20 + 85 + 60 + 97 = 335 total documented divergences; the Chip 5-min clip pipeline alone accounts for 193)
 
 A `SCHEMA.md` file describes the columns and value sets used in each CSV.
 

@@ -9,11 +9,15 @@ The experiment runs three five-minute podcast clips through three transcription 
 - [`EXPERIMENT.md`](EXPERIMENT.md): full methodology, source material, prompts, and findings by stage
 - [`SCHEMA.md`](SCHEMA.md): column definitions and value sets for the four CSV divergence logs
 - [`SOURCES.md`](SOURCES.md): practitioner work the blueprint draws on
-- [`data/`](data/): four CSV divergence logs. **193** divergences logged for the Chip Huyen 5-minute clip path (transcription + synthesis + analysis). **290** divergences across the full experiment, adding the NotebookLM comparison run on full episodes.
-  - `transcription_divergences.csv`: 48 transcription divergences (Chip clip)
-  - `synthesis_cascade.csv`: 85 synthesis cascade events (Chip clip)
-  - `analysis_cascade.csv`: 60 analysis cascade events (Chip clip)
+- [`data/`](data/): six CSV divergence logs. **335** total documented divergences across the experiment.
+  - `transcription_divergences_chip.csv`: 48 transcription divergences (Chip clip)
+  - `transcription_divergences_hamel_shreya.csv`: 25 transcription divergences (Hamel/Shreya clip)
+  - `transcription_divergences_aishwarya_kiriti.csv`: 20 transcription divergences (Aishwarya/Kiriti clip)
+  - `synthesis_cascade_chip.csv`: 85 synthesis cascade events (Chip clip)
+  - `analysis_cascade_chip.csv`: 60 analysis cascade events (Chip clip)
   - `nlm_divergences.csv`: 97 NotebookLM divergences (full-episode agentic comparison, all 3 episodes)
+
+  **Headline counts:** 193 divergences from the Chip pipeline (48+85+60). 45 transcription divergences from the other two 5-min clips (25+20). 97 from NotebookLM full-episode comparisons. 335 total.
 - [`audio/`](audio/): the three five-minute source clips (`.mp3`)
 - [`transcripts/`](transcripts/): all transcripts and AI outputs used in the experiment
   - `ground-truth/`: three manually verified ground-truth transcripts

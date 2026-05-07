@@ -23,7 +23,13 @@ Selection rationale: thematic coherence (all three discuss AI evaluation from di
 
 ## 3. Pipeline Stages Tested
 
-### Stage 1: Transcription
+### Scope
+
+The full pipeline (transcription → synthesis → analysis) was run end-to-end on the **Chip Huyen 5-minute clip only**. The Hamel/Shreya and Aishwarya/Kiriti clips were transcribed by all three tools but did not progress through synthesis and analysis. Raw transcripts from the other two clips live in `transcripts/tool-outputs/` for anyone who wants to extend the comparison. Cross-clip observations from the transcription audit (e.g., the Aishwarya/Kiriti `/v/-/w/` confusion) appear in Section 5.1 as narrative findings rather than as CSV rows.
+
+The NotebookLM agentic comparison (`nlm_divergences.csv`) is the exception: it covers full episodes of all three.
+
+### Stage 1: Transcription (all three clips)
 
 Three tools, each processing the same audio clips:
 - Gemini (AI)
@@ -32,9 +38,11 @@ Three tools, each processing the same audio clips:
 
 Rev's human transcripts served as a third version, with the understanding that human editing introduces its own transformations: editorial polish, disfluency removal, filler stripping.
 
-A fourth, independent ground-truth transcript was produced manually by the researcher using Reduct's video-alongside-text feature.
+A fourth, independent ground-truth transcript was produced manually by the researcher using Reduct's video-alongside-text feature, for each of the three clips.
 
-### Stage 2: Synthesis
+Formally logged divergences (`transcription_divergences.csv`) cover the Chip clip only. The other two clips' transcripts are available for direct comparison.
+
+### Stage 2: Synthesis (Chip clip only)
 
 - Focused on the Chip Huyen clip (strongest accent-related findings at the transcription stage)
 - Three transcripts × four models (Claude Opus 4.6, Gemini 3.1 Pro, GPT-5.4, GPT-4o) = 12 summaries
@@ -43,7 +51,7 @@ A fourth, independent ground-truth transcript was produced manually by the resea
 **Synthesis prompt:**
 > "Summarize the key arguments in this conversation about AI evaluation."
 
-### Stage 3: Analysis (theme extraction)
+### Stage 3: Analysis (theme extraction; Chip clip only)
 
 - 12 summaries analyzed by Claude Opus 4.6 (single model, isolating upstream variation)
 - 12 total analyses
@@ -97,7 +105,7 @@ Divergences between NotebookLM's YouTube-source and transcript-source outputs ac
 
 ## 5. Key Findings
 
-### 5.1 Transcription Stage (48 events)
+### 5.1 Transcription Stage (48 events logged; Chip clip + cross-clip narrative observations)
 
 - **4 critical errors** where meaning was inverted or a key term was wrong.
 - **The bearishness finding:** "I'm much less bearish" (Gemini) vs. "I'm actually a bit bearish" (Reduct) vs. "I'm not sure if I'm bearish" (Rev human). Three contradictory stances from the same utterance. Each transcription tool resolved acoustic ambiguity differently, producing opposite readings of the speaker's position.

@@ -1,6 +1,18 @@
 # Schema
 
-Column definitions and value sets for the four CSV error logs in [`data/`](data/).
+Column definitions and value sets for the four CSV divergence logs in [`data/`](data/).
+
+## Terminology
+
+- **Divergence**: a single observed difference between outputs (between tools, between source paths, or between an output and the manually verified ground truth). One row per divergence.
+- **Cascade**: how a divergence at one stage propagates or is transformed at the next stage. The synthesis and analysis files log cascade events because they track what happened to upstream divergences as the pipeline ran.
+
+## What the headline counts mean
+
+- **193 = 48 + 85 + 60.** Divergences logged for the Chip Huyen 5-minute clip path: 48 at transcription + 85 at synthesis + 60 at analysis. This is the number cited as "193 documented divergences from a single 5-minute clip."
+- **290 = 193 + 97.** Adds the 97 NotebookLM divergences from full-episode comparisons across all three episodes (Chip, Hamel/Shreya, Aishwarya/Kiriti). This is the number cited as "290 across the full experiment."
+
+The two numbers measure different scopes. 193 is one clip, three pipeline stages, four LLMs. 290 adds the agentic-platform comparison run on full episodes rather than 5-minute clips.
 
 ---
 
@@ -10,17 +22,17 @@ Divergences between three transcription sources on the same source audio.
 
 | Column | Description |
 |---|---|
-| `error_id` | Unique identifier (E01, E02, …) |
+| `divergence_id` | Unique identifier (E01, E02, …) |
 | `timestamp_approx` | Approximate timestamp in the audio clip |
 | `manual_audit_ground_truth` | The researcher's manually audited reading of what was actually said in the audio, produced using Reduct's video-alongside-text feature. A single ground-truth phrase per row, with a brief descriptor where the divergence is structural (speaker attribution, segment boundary). Full analytical context, alternate candidate readings, and divergence patterns across tools are documented in the `notes` column |
 | `gemini_transcript` | What Gemini's ASR returned |
 | `reduct_transcript` | What Reduct's ASR returned |
 | `rev_transcript` | What Rev's human transcription returned (the version Lenny's Podcast publishes) |
-| `error_type` | See enum below |
+| `divergence_type` | See enum below |
 | `severity` | `critical`, `moderate`, or `minor` |
 | `notes` | Researcher's interpretation of the divergence |
 
-**`error_type` values:**
+**`divergence_type` values:**
 `word_substitution`, `word_omission`, `word_addition`, `speaker_misattribution`, `hedging_lost`, `hedging_changed`, `proper_noun_error`, `number_error`, `technical_term_error`, `disfluency_handling`
 
 **`severity` scale:**
@@ -30,14 +42,14 @@ Divergences between three transcription sources on the same source audio.
 
 ---
 
-## `synthesis_cascade.csv` — synthesis-stage divergences (85 rows)
+## `synthesis_cascade.csv` — synthesis-stage cascade events (85 rows)
 
-How transcription errors propagated or were transformed at the synthesis stage. One row per observed cascade event.
+How transcription divergences propagated or were transformed at the synthesis stage. One row per observed cascade event.
 
 | Column | Description |
 |---|---|
 | `cascade_id` | Unique identifier (C01, C02, …) |
-| `source_error_id` | Linked `error_id` from `error_analysis.csv`, or blank if originating at synthesis |
+| `source_error_id` | Linked `divergence_id` from `transcription_divergences.csv`, or blank if originating at synthesis |
 | `transcript_source` | `gemini`, `reduct`, `rev`, or `all_transcripts` |
 | `model` | `claude`, `gemini`, `openai` (GPT-5.4), or `openai_4o` (GPT-4o) |
 | `claim_in_summary` | The text from the AI-generated summary |
@@ -47,10 +59,10 @@ How transcription errors propagated or were transformed at the synthesis stage. 
 | `notes` | Researcher's interpretation |
 
 **`cascade_type` values:**
-- `error_passed_through` — transcription error reproduced as-is
-- `error_amplified` — transcription error made worse (e.g., elaborated into false detail)
-- `error_corrected` — transcription error silently fixed by the model
-- `error_avoided` — content omitted from summary, sidestepping the error
+- `error_passed_through` — transcription divergence reproduced as-is
+- `error_amplified` — transcription divergence made worse (e.g., elaborated into false detail)
+- `error_corrected` — transcription divergence silently fixed by the model
+- `error_avoided` — content omitted from summary, sidestepping the divergence
 - `hedging_to_assertion` — hedged spoken language rendered as confident claim
 - `argument_dropped` — speaker's argument or qualification absent from summary
 - `argument_invented` — claim in summary not present in transcript
@@ -58,7 +70,7 @@ How transcription errors propagated or were transformed at the synthesis stage. 
 
 ---
 
-## `analysis_cascade.csv` — analysis-stage divergences (60 rows)
+## `analysis_cascade.csv` — analysis-stage cascade events (60 rows)
 
 How synthesis-stage distortions propagated or were transformed at the analysis (theme extraction) stage. One row per observed cascade event.
 
@@ -76,7 +88,7 @@ How synthesis-stage distortions propagated or were transformed at the analysis (
 | `notes` | Researcher's interpretation |
 
 **`cascade_type` values:**
-- `theme_from_transcription_error` — theme derived from a transcription error
+- `theme_from_transcription_error` — theme derived from a transcription divergence
 - `theme_from_synthesis_error` — theme derived from a synthesis-stage distortion
 - `theme_fabricated` — theme has no basis in the upstream summary
 - `recommendation_fabricated` — recommendation has no basis in the upstream summary
@@ -90,23 +102,23 @@ How synthesis-stage distortions propagated or were transformed at the analysis (
 
 ---
 
-## `nlm_error_analysis.csv` — NotebookLM divergences (97 rows)
+## `nlm_divergences.csv` — NotebookLM divergences (97 rows)
 
-Divergences between NotebookLM's YouTube-source and transcript-source outputs across all three episodes. Documents how an agentic platform behaves when fed the same source in two different formats.
+Divergences between NotebookLM's YouTube-source and transcript-source outputs across all three episodes (full-episode comparisons, not 5-minute clips). Documents how an agentic platform behaves when fed the same source in two different formats.
 
 | Column | Description |
 |---|---|
-| `error_id` | Unique identifier |
+| `divergence_id` | Unique identifier |
 | `episode` | `chip`, `hamel_shreya`, or `aishwarya_kiriti` |
 | `source_type` | `youtube_video` or `rev_transcript` |
 | `output_type` | `summary` or `analysis` |
-| `error_type` | See enum below |
+| `divergence_type` | See enum below |
 | `severity` | `critical`, `moderate`, or `minor` |
 | `exact_quote` | Verbatim quote from the NLM output |
 | `comparison_quote` | Corresponding text from the other source path (or source audio) |
 | `notes` | Researcher's interpretation |
 
-**`error_type` values:**
+**`divergence_type` values:**
 - `proper_noun_garbled` — name or term mistranscribed
 - `theme_substitution` — same episode, different top theme by source path
 - `theme_present_one_source_only` — theme appears in only one of the two source paths

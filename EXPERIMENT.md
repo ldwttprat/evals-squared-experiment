@@ -5,7 +5,7 @@ A worked example of AI-infused pipeline evaluation. This appendix documents the 
 - *Winning the Game of Broken Telephone: A Blueprint for Evaluating AI Across the Research Pipeline.* DeWitt Prat, Lindsey. *ResearchOps Review*, May 2026. <https://www.theresearchopsreview.com/p/a-blueprint-for-evaluating-ai-across-the-research-pipeline>
 - *Evaluating AI Across the Research Pipeline.* DeWitt Prat, Lindsey, with Kaleb Loosbrock, hosted by Ben Wiedmaier. User Interviews webinar, 31 March 2026. <https://www.userinterviews.com/blog/what-is-the-ai-research-risk-cascade>
 
-The four CSV error logs referenced here are in this repository under `data/`.
+The four CSV divergence logs referenced here are in this repository under `data/`.
 
 ## 1. Research Question
 
@@ -59,38 +59,41 @@ All analysis runs were fresh API calls with no memory between them.
 - NLM produced summaries and analyses from each source type
 - 12 NLM outputs (3 episodes × 2 source types × 2 output types)
 
-## 4. Error Tracking Methodology
+## 4. Divergence Tracking Methodology
 
-Four CSV error logs, each with typed and severity-rated entries:
+Four CSV divergence logs, each with typed and severity-rated entries. Headline counts:
 
-### `transcription_divergences.csv` (48 entries)
+- **193 divergences** logged for the Chip Huyen 5-minute clip path (48 + 85 + 60: transcription + synthesis + analysis)
+- **290 divergences** across the full experiment, adding the 97-entry NotebookLM log from full-episode comparisons across all three episodes
 
-Transcription-stage divergences between three tools.
+### `transcription_divergences.csv` (48 entries — Chip clip)
 
-- **Columns:** `error_id`, `timestamp_approx`, `spoken_word_best_guess`, `gemini_transcript`, `reduct_transcript`, `rev_transcript`, `error_type`, `severity`, `notes`
-- **Error types:** `word_substitution`, `word_omission`, `word_addition`, `speaker_misattribution`, `hedging_lost`, `hedging_changed`, `proper_noun_error`, `number_error`, `technical_term_error`, `disfluency_handling`
+Divergences between three transcription sources on the same source audio.
+
+- **Columns:** `divergence_id`, `timestamp_approx`, `manual_audit_ground_truth`, `gemini_transcript`, `reduct_transcript`, `rev_transcript`, `divergence_type`, `severity`, `notes`
+- **Divergence types:** `word_substitution`, `word_omission`, `word_addition`, `speaker_misattribution`, `hedging_lost`, `hedging_changed`, `proper_noun_error`, `number_error`, `technical_term_error`, `disfluency_handling`
 - **Severity scale:** critical (changes meaning), moderate (changes emphasis or tone), minor (cosmetic)
 
-### `synthesis_cascade.csv` (85 entries)
+### `synthesis_cascade.csv` (85 entries — Chip clip)
 
-How transcription errors propagated or were handled at the synthesis stage.
+How transcription divergences propagated or were transformed at the synthesis stage.
 
 - **Columns:** `cascade_id`, `source_error_id`, `transcript_source`, `model`, `claim_in_summary`, `original_in_transcript`, `cascade_type`, `severity`, `notes`
 - **Cascade types:** `error_passed_through`, `error_amplified`, `error_corrected`, `error_avoided`, `hedging_to_assertion`, `argument_dropped`, `argument_invented`, `stance_shifted`
 
-### `analysis_cascade.csv` (60 entries)
+### `analysis_cascade.csv` (60 entries — Chip clip)
 
-How synthesis-stage distortions propagated or were handled at the analysis stage.
+How synthesis-stage distortions propagated or were transformed at the analysis stage.
 
 - **Columns:** `cascade_id`, `upstream_source`, `analysis_model`, `theme_extracted`, `recommendation`, `cascade_type`, `upstream_error_link`, `severity`, `exact_quote`, `notes`
 - **Cascade types:** `theme_from_transcription_error`, `theme_from_synthesis_error`, `theme_fabricated`, `recommendation_fabricated`, `hedging_to_doctrine`, `stance_amplified`, `stance_reversed`, `information_lost`, `confidence_without_basis`, `inter_analysis_contradiction`, `transcript_group_clustering`
 
-### `nlm_error_analysis.csv` (97 entries)
+### `nlm_divergences.csv` (97 entries — full episodes, all 3)
 
-Divergences between NotebookLM's YouTube-source and transcript-source outputs across all three episodes.
+Divergences between NotebookLM's YouTube-source and transcript-source outputs across all three episodes (full episodes, not 5-minute clips).
 
-- **Columns:** `error_id`, `episode`, `source_type`, `output_type`, `error_type`, `severity`, `exact_quote`, `comparison_quote`, `notes`
-- **Error types:** `proper_noun_garbled`, `theme_substitution`, `theme_present_one_source_only`, `claim_present_one_source_only`, `specificity_loss`, `specificity_gain`, `vocabulary_import`, `framing_divergence`, `confidence_without_hedging`, `fabrication_candidate`, `structural_masking`, `agentic_opacity`
+- **Columns:** `divergence_id`, `episode`, `source_type`, `output_type`, `divergence_type`, `severity`, `exact_quote`, `comparison_quote`, `notes`
+- **Divergence types:** `proper_noun_garbled`, `theme_substitution`, `theme_present_one_source_only`, `claim_present_one_source_only`, `specificity_loss`, `specificity_gain`, `vocabulary_import`, `framing_divergence`, `confidence_without_hedging`, `fabrication_candidate`, `structural_masking`, `agentic_opacity`
 
 ## 5. Key Findings
 
@@ -143,7 +146,7 @@ This repository contains:
 - **12 summaries** (Chip clip only; 3 transcripts × 4 models)
 - **12 analyses** (Claude Opus 4.6)
 - **12 NotebookLM outputs** (3 episodes × 2 sources × 2 output types)
-- **4 error log CSVs** (48 + 85 + 60 + 97 = 290 total documented events)
+- **4 divergence-log CSVs** (48 + 85 + 60 + 97 = 290 total documented divergences; the first three sum to 193 from the Chip 5-minute clip path)
 
 A `SCHEMA.md` file describes the columns and value sets used in each CSV.
 

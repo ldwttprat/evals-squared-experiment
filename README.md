@@ -7,13 +7,13 @@ The experiment runs three five-minute podcast clips through three transcription 
 ## What's in here
 
 - [`EXPERIMENT.md`](EXPERIMENT.md): full methodology, source material, prompts, and findings by stage
-- [`SCHEMA.md`](SCHEMA.md): column definitions and value sets for the four CSV error logs
+- [`SCHEMA.md`](SCHEMA.md): column definitions and value sets for the four CSV divergence logs
 - [`SOURCES.md`](SOURCES.md): practitioner work the blueprint draws on
-- [`data/`](data/): four CSV error logs (290 documented divergences across the pipeline)
-  - `transcription_divergences.csv`: 48 transcription divergences
-  - `synthesis_cascade.csv`: 85 synthesis divergences
-  - `analysis_cascade.csv`: 60 analysis divergences
-  - `nlm_error_analysis.csv`: 97 NotebookLM divergences (agentic comparison)
+- [`data/`](data/): four CSV divergence logs. **193** divergences logged for the Chip Huyen 5-minute clip path (transcription + synthesis + analysis). **290** divergences across the full experiment, adding the NotebookLM comparison run on full episodes.
+  - `transcription_divergences.csv`: 48 transcription divergences (Chip clip)
+  - `synthesis_cascade.csv`: 85 synthesis cascade events (Chip clip)
+  - `analysis_cascade.csv`: 60 analysis cascade events (Chip clip)
+  - `nlm_divergences.csv`: 97 NotebookLM divergences (full-episode agentic comparison, all 3 episodes)
 - [`audio/`](audio/): the three five-minute source clips (`.mp3`)
 - [`transcripts/`](transcripts/): all transcripts and AI outputs used in the experiment
   - `ground-truth/`: three manually verified ground-truth transcripts

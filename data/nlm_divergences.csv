@@ -1,4 +1,4 @@
-error_id,episode,source_type,output_type,error_type,severity,exact_quote,comparison_quote,notes
+divergence_id,episode,source_type,output_type,divergence_type,severity,exact_quote,comparison_quote,notes
 2,chip,youtube_video,summary,theme_present_one_source_only,moderate,dismantles the common misconception that performance gains come from fine-tuning or picking the 'best' model,[not present in transcript summary],Video summary frames Chip as actively dismantling a misconception; transcript summary does not include this adversarial framing.
 3,chip,rev_transcript,summary,theme_present_one_source_only,moderate,explores the organizational shift toward 'AI Engineering',[not present in video summary],Transcript summary introduces the concept of 'AI Engineering' as an organizational shift. Video summary never mentions this term or theme.
 4,chip,rev_transcript,summary,vocabulary_import,moderate,AI Engineering,[not present in video summary],'AI Engineering' as a named discipline may be imported by the NLM from broader training data rather than transcribed from the source audio.

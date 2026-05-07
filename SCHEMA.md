@@ -12,7 +12,7 @@ Divergences between three transcription sources on the same source audio.
 |---|---|
 | `error_id` | Unique identifier (E01, E02, …) |
 | `timestamp_approx` | Approximate timestamp in the audio clip |
-| `manual_audit_ground_truth` | The researcher's manually audited reading of what was actually said in the audio, produced using Reduct's video-alongside-text feature. Where the audio cannot be resolved to a single reading, the cell reads `[ambiguous — see notes]`. Where the divergence is structural (speaker attribution, segment boundary, etc.) rather than about a specific spoken phrase, the cell reads `[see notes — <issue>]`. Candidate readings and full context for these cases are documented in the `notes` column |
+| `manual_audit_ground_truth` | The researcher's manually audited reading of what was actually said in the audio, produced using Reduct's video-alongside-text feature. A single ground-truth phrase per row, with a brief descriptor where the divergence is structural (speaker attribution, segment boundary). Full analytical context, alternate candidate readings, and divergence patterns across tools are documented in the `notes` column |
 | `gemini_transcript` | What Gemini's ASR returned |
 | `reduct_transcript` | What Reduct's ASR returned |
 | `rev_transcript` | What Rev's human transcription returned (the version Lenny's Podcast publishes) |

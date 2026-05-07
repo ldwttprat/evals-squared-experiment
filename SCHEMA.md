@@ -4,18 +4,18 @@ Column definitions and value sets for the four CSV error logs in [`data/`](data/
 
 ---
 
-## `error_analysis.csv` — transcription divergences (48 rows)
+## `transcription_divergences.csv` — transcription-stage divergences (48 rows)
 
-Divergences between three transcription tools on the same source audio.
+Divergences between three transcription sources on the same source audio.
 
 | Column | Description |
 |---|---|
 | `error_id` | Unique identifier (E01, E02, …) |
 | `timestamp_approx` | Approximate timestamp in the audio clip |
-| `spoken_word_best_guess` | The researcher's best reading of what was actually said |
+| `manual_audit_ground_truth` | The researcher's manually audited reading of what was actually said in the audio, produced using Reduct's video-alongside-text feature. For 8 of 48 rows the audio is acoustically ambiguous and multiple candidate readings are listed instead of a single resolved one (these cases are flagged in the `notes` column) |
 | `gemini_transcript` | What Gemini's ASR returned |
 | `reduct_transcript` | What Reduct's ASR returned |
-| `rev_transcript` | What Rev's human transcription returned |
+| `rev_transcript` | What Rev's human transcription returned (the version Lenny's Podcast publishes) |
 | `error_type` | See enum below |
 | `severity` | `critical`, `moderate`, or `minor` |
 | `notes` | Researcher's interpretation of the divergence |

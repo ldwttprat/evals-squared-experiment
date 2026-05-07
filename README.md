@@ -10,7 +10,7 @@ The experiment runs three five-minute podcast clips through three transcription 
 - [`SCHEMA.md`](SCHEMA.md): column definitions and value sets for the four CSV error logs
 - [`SOURCES.md`](SOURCES.md): practitioner work the blueprint draws on
 - [`data/`](data/): four CSV error logs (290 documented divergences across the pipeline)
-  - `error_analysis.csv`: 48 transcription divergences
+  - `transcription_divergences.csv`: 48 transcription divergences
   - `synthesis_cascade.csv`: 85 synthesis divergences
   - `analysis_cascade.csv`: 60 analysis divergences
   - `nlm_error_analysis.csv`: 97 NotebookLM divergences (agentic comparison)

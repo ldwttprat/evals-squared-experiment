@@ -63,7 +63,7 @@ All analysis runs were fresh API calls with no memory between them.
 
 Four CSV error logs, each with typed and severity-rated entries:
 
-### `error_analysis.csv` (48 entries)
+### `transcription_divergences.csv` (48 entries)
 
 Transcription-stage divergences between three tools.
 
